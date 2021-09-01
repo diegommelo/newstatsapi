@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\AthleteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('team/{id}/{season}', [TeamController::class, 'getTeamSeason']);
+Route::get('player/{id}/{season}', [AthleteController::class, 'getAthleteSeason']);
